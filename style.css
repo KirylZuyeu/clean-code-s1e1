@@ -14,7 +14,7 @@ button {
 }
 
 /* Basic Style */
-body {
+.todo {
     background-color: #f8f8f8;
     color: #333;
     font-family: Lato, sans-serif;
@@ -35,14 +35,6 @@ body {
     font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
-
-    .header { 
-        text-align: center;
-    }
-
-}
-
 .main {
     display: block;
     width: 500px;
@@ -55,7 +47,7 @@ body {
     flex-grow: 1;
 }
 
-.task-row-wrapper {
+.section-add__block {
     display: flex;
 }
 
@@ -84,7 +76,9 @@ body {
     text-transform: uppercase;
 }
 
-input[type="text"] {
+.section-add__input,
+.section-todo__item_text,
+.section-completed__item_text {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -95,24 +89,27 @@ input[type="text"] {
     border-radius: 6px;
     font-family: Lato, sans-serif;
     color: #888;
+    width: 226px;
 }
 
-input[type="text"]:focus {
+.section-add__input:focus,
+.section-todo__item_text:focus,
+.section-completed__item_text:focus {
     color: #333;
 }
 
 /* New Task */
-label[for='new-task'] {
+.section-add__title {
     display: block;
     margin: 0 0 20px;
 }
 
-input#new-task {
+.section-add__input {
     width: 318px;
 }
 
 /* Task list */
-li {
+.list-item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -121,22 +118,20 @@ li {
     align-items: center;
 }
 
-li > * {
+.list-item > * {
     vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.section-todo__item_checkbox,
+.section-completed__item_checkbox {
     margin: 0 10px;
 }
 
-li > label {
+.section-todo__item_name,
+.section-completed__item_name {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
-    width: 226px;
-}
-
-li > input[type="text"] {
     width: 226px;
 }
 
@@ -151,21 +146,33 @@ li > input[type="text"] {
 }
 
 /* Completed */
-ul#completed-tasks label {
+.section-completed__list .section-completed__item_name,
+.section-completed__list .section-todo__item_name {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.section-todo__item_text,
+.section-completed__item_text {
     display: none;
 }
 
-ul li.editMode input[type=text] {
+.editMode .section-todo__item_text,
+.editMode .section-completed__item_text {
     display: inline-block;
     width: 224px;
 }
 
-ul li.editMode label {
+.editMode .section-todo__item_name,
+.editMode .section-completed__item_name {
     display: none;
+}
+
+@media (max-width:768px) {
+
+    .header { 
+        text-align: center;
+    }
+
 }
