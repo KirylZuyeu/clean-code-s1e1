@@ -1,48 +1,3 @@
-/* Basic Style */
-body {
-    background-color: #f8f8f8;
-    color: #333;
-    font-family: Lato, sans-serif;
-}
-
-.aaa {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-    text-align: right;
-}
-
-.aaa img {
-    width: 100%;
-}
-
-.aaa .more_inf {
-    font-family: fantasy, cursive;
-}
-
-@media (max-width:768px) {
-
-    .aaa { text-align: center;
-    }
-    
-}
-
-.centered-main-page-element {
-    display: block;
-    width: 500px;
-    margin: 0 auto 0;
-}
-
-.task {
-    width: 56%;
-    display: inline-block;
-    flex-grow: 1;
-}
-
-.task-row-wrapper {
-    display: flex;
-}
-
 ul {
     margin: 0;
     padding: 0px;
@@ -56,6 +11,52 @@ h3 {
 input,
 button {
     outline: none;
+}
+
+/* Basic Style */
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Lato, sans-serif;
+}
+
+.header {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+}
+
+.header__img {
+    width: 100%;
+}
+
+.header__link-info {
+    font-family: fantasy, cursive;
+}
+
+@media (max-width:768px) {
+
+    .header { 
+        text-align: center;
+    }
+
+}
+
+.main {
+    display: block;
+    width: 500px;
+    margin: 0 auto 0;
+}
+
+.task {
+    width: 56%;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.task-row-wrapper {
+    display: flex;
 }
 
 button {
@@ -116,7 +117,6 @@ li {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
-
     display: flex;
     justify-content: space-between;
     align-items: center;

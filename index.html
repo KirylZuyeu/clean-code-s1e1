@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <header class="aaa">
-      <img src="./eisenhower-matrix.jpg" alt="eisenhower matrix">
-      <a class="more_inf" 
+    <header class="header">
+      <img class="header__img" src="./eisenhower-matrix.jpg" alt="eisenhower matrix">
+      <a class="header__link-info" 
          href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
-    <main class="centered-main-page-element">
-      <section id="topSectionForAddingElementToList">
+    <main class="main">
+      <section class="section">
         <h3 for="new-task">Add Item</h3>
         <div class="task-row-wrapper">
           <input id="new-task" class="task" type="text">
           <button>Add</button>
         </div>
       </section>
-      <section>
+      <section class="section">
         <h3>Todo</h3>
-        <ul id="incompleteTasks">
+        <ul id="incomplete-tasks">
           <li>
             <input type="checkbox">
             <label class="task">Pay Bills</label>
@@ -42,7 +42,7 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="section">
         <h3>Completed</h3>
         <ul id="completed-tasks">
           <li>
